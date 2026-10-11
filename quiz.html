@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz | Dental Algeria Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="index.html" class="brand">
+          <span class="brand-mark">DA</span>
+          <span>
+            <strong>Dental Algeria</strong>
+            <small>Academy</small>
+          </span>
+        </a>
+
+        <nav class="main-nav" aria-label="Navigation principale">
+          <a href="index.html">Accueil</a>
+          <a href="courses.html">Cours</a>
+          <a href="resources.html">Ressources</a>
+          <a href="quiz.html" class="active">Quiz</a>
+          <a href="dashboard.html">Tableau de bord</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="ghost-btn" id="themeToggle" aria-label="Changer le thème">Mode nuit</button>
+          <button class="primary-btn" id="loginBtn">Connexion</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <section class="page-hero small-hero">
+        <div class="container">
+          <span class="eyebrow">Préparation</span>
+          <h1>Quiz de révision</h1>
+          <p>Testez vos connaissances en dentisterie avec des questions pratiques et des cas cliniques.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container quiz-layout">
+          <div class="quiz-panel">
+            <div id="quizApp">
+              <div class="quiz-header">
+                <span id="quizCounter">Question 1 / 5</span>
+                <span id="quizCategory">Parodontologie</span>
+              </div>
+              <h2 id="questionText">Quel élément est considéré comme un facteur de risque majeur pour la maladie parodontale ?</h2>
+
+              <div class="answers" id="answerList"></div>
+
+              <div class="quiz-actions">
+                <button class="secondary-btn" id="prevBtn" type="button">Précédent</button>
+                <button class="primary-btn" id="nextBtn" type="button">Suivant</button>
+              </div>
+            </div>
+          </div>
+
+          <aside class="stacked-card">
+            <h3>Statistiques</h3>
+            <ul>
+              <li>Score actuel : <strong id="scoreValue">0%</strong></li>
+              <li>Bonnes réponses : <strong id="goodAnswers">0</strong></li>
+              <li>Réponses fausses : <strong id="badAnswers">0</strong></li>
+            </ul>
+            <button class="primary-btn wide" id="resetQuiz">Recommencer</button>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>© 2026 Dental Algeria Academy</p>
+      </div>
+    </footer>
+
+    <div class="modal hidden" id="loginModal" aria-hidden="true">
+      <div class="modal-backdrop" data-close="true"></div>
+      <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+        <button class="close-btn" data-close="true" aria-label="Fermer">×</button>
+        <h3 id="loginTitle">Connexion</h3>
+        <form id="loginForm">
+          <label>
+            Nom complet
+            <input type="text" id="studentName" placeholder="Entrez votre nom" required />
+          </label>
+          <label>
+            Niveau d’étude
+            <select id="studentLevel">
+              <option value="1ère année">1ère année</option>
+              <option value="2e année">2e année</option>
+              <option value="3e année">3e année</option>
+              <option value="4e année">4e année</option>
+              <option value="5e année">5e année</option>
+              <option value="6e année">6e année</option>
+            </select>
+          </label>
+          <button type="submit" class="primary-btn wide">Se connecter</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

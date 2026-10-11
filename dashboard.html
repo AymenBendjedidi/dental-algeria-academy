@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tableau de bord | Dental Algeria Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="index.html" class="brand">
+          <span class="brand-mark">DA</span>
+          <span>
+            <strong>Dental Algeria</strong>
+            <small>Academy</small>
+          </span>
+        </a>
+
+        <nav class="main-nav" aria-label="Navigation principale">
+          <a href="index.html">Accueil</a>
+          <a href="courses.html">Cours</a>
+          <a href="resources.html">Ressources</a>
+          <a href="quiz.html">Quiz</a>
+          <a href="dashboard.html" class="active">Tableau de bord</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="ghost-btn" id="themeToggle" aria-label="Changer le thème">Mode nuit</button>
+          <button class="primary-btn" id="loginBtn">Connexion</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <section class="page-hero small-hero">
+        <div class="container">
+          <span class="eyebrow">Mon espace</span>
+          <h1 id="dashboardTitle">Bienvenue étudiant</h1>
+          <p>Suivi de vos cours, progressions, quiz et objectifs académiques.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container dashboard-grid">
+          <div class="dashboard-card big-card">
+            <h2>Progression générale</h2>
+            <div class="progress-ring">
+              <div class="ring-center">
+                <strong>78%</strong>
+              </div>
+            </div>
+            <p>Vous avez validé 16 modules sur 20. Continuez votre préparation pour la prochaine évaluation.</p>
+          </div>
+
+          <div class="dashboard-card">
+            <h2>Objectifs du mois</h2>
+            <ul class="check-list">
+              <li>✔ Réviser la morphologie dentaire</li>
+              <li>✔ Passer 2 quiz de parodontologie</li>
+              <li>✔ Compléter 3 fiches de synthèse</li>
+            </ul>
+          </div>
+
+          <div class="dashboard-card">
+            <h2>Planning</h2>
+            <div class="mini-plan">
+              <span>Lundi</span>
+              <strong>Endodontie</strong>
+            </div>
+            <div class="mini-plan">
+              <span>Mercredi</span>
+              <strong>Radiologie</strong>
+            </div>
+            <div class="mini-plan">
+              <span>Vendredi</span>
+              <strong>QCM de révision</strong>
+            </div>
+          </div>
+
+          <div class="dashboard-card wide-card">
+            <h2>Derniers résultats</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Matière</th>
+                  <th>Note</th>
+                  <th>Statut</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Parodontologie</td>
+                  <td>16/20</td>
+                  <td><span class="success-pill">Validé</span></td>
+                </tr>
+                <tr>
+                  <td>Endodontie</td>
+                  <td>13/20</td>
+                  <td><span class="warning-pill">À améliorer</span></td>
+                </tr>
+                <tr>
+                  <td>Radiologie</td>
+                  <td>18/20</td>
+                  <td><span class="success-pill">Excellent</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>© 2026 Dental Algeria Academy</p>
+      </div>
+    </footer>
+
+    <div class="modal hidden" id="loginModal" aria-hidden="true">
+      <div class="modal-backdrop" data-close="true"></div>
+      <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+        <button class="close-btn" data-close="true" aria-label="Fermer">×</button>
+        <h3 id="loginTitle">Connexion</h3>
+        <form id="loginForm">
+          <label>
+            Nom complet
+            <input type="text" id="studentName" placeholder="Entrez votre nom" required />
+          </label>
+          <label>
+            Niveau d’étude
+            <select id="studentLevel">
+              <option value="1ère année">1ère année</option>
+              <option value="2e année">2e année</option>
+              <option value="3e année">3e année</option>
+              <option value="4e année">4e année</option>
+              <option value="5e année">5e année</option>
+              <option value="6e année">6e année</option>
+            </select>
+          </label>
+          <button type="submit" class="primary-btn wide">Se connecter</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

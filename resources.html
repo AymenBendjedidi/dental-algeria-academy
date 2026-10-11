@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ressources | Dental Algeria Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="index.html" class="brand">
+          <span class="brand-mark">DA</span>
+          <span>
+            <strong>Dental Algeria</strong>
+            <small>Academy</small>
+          </span>
+        </a>
+
+        <nav class="main-nav" aria-label="Navigation principale">
+          <a href="index.html">Accueil</a>
+          <a href="courses.html">Cours</a>
+          <a href="resources.html" class="active">Ressources</a>
+          <a href="quiz.html">Quiz</a>
+          <a href="dashboard.html">Tableau de bord</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="ghost-btn" id="themeToggle" aria-label="Changer le thème">Mode nuit</button>
+          <button class="primary-btn" id="loginBtn">Connexion</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <section class="page-hero small-hero">
+        <div class="container">
+          <span class="eyebrow">Bibliothèque</span>
+          <h1>Ressources digitales utiles</h1>
+          <p>Fiches de cours, vidéos, bibliographie et outils de préparation pour améliorer votre performance.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container resources-grid">
+          <article class="resource-card">
+            <span class="resource-icon">📘</span>
+            <h3>Fiches de synthèse</h3>
+            <p>Points clés par matière, notions à retenir et plan de réponse pour les examens.</p>
+            <button class="secondary-btn small-btn">Télécharger</button>
+          </article>
+          <article class="resource-card">
+            <span class="resource-icon">🎧</span>
+            <h3>Vidéos pédagogiques</h3>
+            <p>Leçons courtes et explications visuelles sur les techniques et les pathologies dentaires.</p>
+            <button class="secondary-btn small-btn">Ouvrir</button>
+          </article>
+          <article class="resource-card">
+            <span class="resource-icon">🧾</span>
+            <h3>Examens blancs</h3>
+            <p>Entraînement progressif sur les QCM, études de cas et questions écrites.</p>
+            <button class="secondary-btn small-btn">Consulter</button>
+          </article>
+          <article class="resource-card">
+            <span class="resource-icon">📚</span>
+            <h3>Références académiques</h3>
+            <p>Livres, manuels et recommandations utiles pour les travaux de recherche et révisions.</p>
+            <button class="secondary-btn small-btn">Voir la liste</button>
+          </article>
+          <article class="resource-card">
+            <span class="resource-icon">🧠</span>
+            <h3>Flashcards</h3>
+            <p>Cartes mentales pour mémoriser anatomie dentaire, parodonte et procédures cliniques.</p>
+            <button class="secondary-btn small-btn">Accéder</button>
+          </article>
+          <article class="resource-card">
+            <span class="resource-icon">🩺</span>
+            <h3>Cas cliniques</h3>
+            <p>Approche pratique des diagnostics, traitements recommandés et suivi de patient.</p>
+            <button class="secondary-btn small-btn">Explorer</button>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>© 2026 Dental Algeria Academy</p>
+      </div>
+    </footer>
+
+    <div class="modal hidden" id="loginModal" aria-hidden="true">
+      <div class="modal-backdrop" data-close="true"></div>
+      <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+        <button class="close-btn" data-close="true" aria-label="Fermer">×</button>
+        <h3 id="loginTitle">Connexion</h3>
+        <form id="loginForm">
+          <label>
+            Nom complet
+            <input type="text" id="studentName" placeholder="Entrez votre nom" required />
+          </label>
+          <label>
+            Niveau d’étude
+            <select id="studentLevel">
+              <option value="1ère année">1ère année</option>
+              <option value="2e année">2e année</option>
+              <option value="3e année">3e année</option>
+              <option value="4e année">4e année</option>
+              <option value="5e année">5e année</option>
+              <option value="6e année">6e année</option>
+            </select>
+          </label>
+          <button type="submit" class="primary-btn wide">Se connecter</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

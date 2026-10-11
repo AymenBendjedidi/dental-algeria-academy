@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cours | Dental Algeria Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="index.html" class="brand">
+          <span class="brand-mark">DA</span>
+          <span>
+            <strong>Dental Algeria</strong>
+            <small>Academy</small>
+          </span>
+        </a>
+
+        <nav class="main-nav" aria-label="Navigation principale">
+          <a href="index.html">Accueil</a>
+          <a href="courses.html" class="active">Cours</a>
+          <a href="resources.html">Ressources</a>
+          <a href="quiz.html">Quiz</a>
+          <a href="dashboard.html">Tableau de bord</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="ghost-btn" id="themeToggle" aria-label="Changer le thème">Mode nuit</button>
+          <button class="primary-btn" id="loginBtn">Connexion</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <section class="page-hero small-hero">
+        <div class="container">
+          <span class="eyebrow">Programme officiel</span>
+          <h1>Les cours de médecine dentaire</h1>
+          <p>Une progression pédagogique claire, progressive et adaptée au contexte universitaire algérien.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="course-detail-grid">
+            <div class="course-list-card">
+              <h2>Catalogue des modules</h2>
+              <div class="module-item">
+                <span class="module-badge">S1</span>
+                <div>
+                  <h3>Anatomie et morphologie dentaire</h3>
+                  <p>Dents permanentes, dents temporaires, rapports anatomiques et champs fonctionnels.</p>
+                </div>
+              </div>
+              <div class="module-item">
+                <span class="module-badge">S2</span>
+                <div>
+                  <h3>Histologie buccale</h3>
+                  <p>Structure des tissus dentaires, parodonte et muqueuses buccales.</p>
+                </div>
+              </div>
+              <div class="module-item">
+                <span class="module-badge">S3</span>
+                <div>
+                  <h3>Microbiologie buccale</h3>
+                  <p>Microflore, biofilms, pathogènes et prévention des maladies infectieuses.</p>
+                </div>
+              </div>
+              <div class="module-item">
+                <span class="module-badge">S4</span>
+                <div>
+                  <h3>Radiologie et imagerie</h3>
+                  <p>Radiographies, diagnostic par l’image et protocole d’exposition.</p>
+                </div>
+              </div>
+              <div class="module-item">
+                <span class="module-badge">S5</span>
+                <div>
+                  <h3>Parodontologie</h3>
+                  <p>Maladies parodontales, prévention, diagnostic et prise en charge chirurgicale.</p>
+                </div>
+              </div>
+              <div class="module-item">
+                <span class="module-badge">S6</span>
+                <div>
+                  <h3>Endodontie</h3>
+                  <p>Pathologies pulpares, instrumentations et obturations de canaux.</p>
+                </div>
+              </div>
+              <div class="module-item">
+                <span class="module-badge">S7</span>
+                <div>
+                  <h3>Prothèse et restaurations</h3>
+                  <p>Restauration esthétique, prothèses partielles et traitements mixtes.</p>
+                </div>
+              </div>
+              <div class="module-item">
+                <span class="module-badge">S8</span>
+                <div>
+                  <h3>Chirurgie orale</h3>
+                  <p>Exodonties, gestes chirurgicaux, suivi post-opératoire et protocoles de sécurité.</p>
+                </div>
+              </div>
+            </div>
+
+            <aside class="stacked-card">
+              <h3>Votre parcours</h3>
+              <ul>
+                <li>✔ Cours théoriques et pratiques</li>
+                <li>✔ Cas cliniques orientés</li>
+                <li>✔ Vérification continue</li>
+                <li>✔ Préparation aux examens d’État</li>
+              </ul>
+              <a href="quiz.html" class="primary-btn wide">Préparer mon quiz</a>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>© 2026 Dental Algeria Academy</p>
+      </div>
+    </footer>
+
+    <div class="modal hidden" id="loginModal" aria-hidden="true">
+      <div class="modal-backdrop" data-close="true"></div>
+      <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+        <button class="close-btn" data-close="true" aria-label="Fermer">×</button>
+        <h3 id="loginTitle">Connexion</h3>
+        <form id="loginForm">
+          <label>
+            Nom complet
+            <input type="text" id="studentName" placeholder="Entrez votre nom" required />
+          </label>
+          <label>
+            Niveau d’étude
+            <select id="studentLevel">
+              <option value="1ère année">1ère année</option>
+              <option value="2e année">2e année</option>
+              <option value="3e année">3e année</option>
+              <option value="4e année">4e année</option>
+              <option value="5e année">5e année</option>
+              <option value="6e année">6e année</option>
+            </select>
+          </label>
+          <button type="submit" class="primary-btn wide">Se connecter</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
